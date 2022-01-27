@@ -14,26 +14,123 @@
     <!-- Eric Mayers CSS Reset -->
     <link rel="stylesheet" href="./assets/css/reset.css" />
 
+    <!-- Main Styling -->
+    <link rel="stylesheet" href="./assets/css/main.css" />
+
+    <!-- Text Styling -->
+    <link rel="stylesheet" href="./assets/css/typography.css" />
+
+    <!-- Inforamtion Table Styling -->
+    <link rel="stylesheet" href="./assets/css/information-table.css" />
+
     <!-- Using Lineawesome Icons -->
-    <link rel="stylesheet" href="./assets/libs/fontAwesome/fontawesome-free-5.15.4-web/css/all.css" />
-
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
+    <link rel="stylesheet" href="./assets/libs/fontawesome-free-5.15.4-web/css/all.css" />
     <title>Parents Information</title>
   </head>
   <body>
+    <div class="container parents-info-list">
+        <div class="container-head">
+            <h4><i class="fas fa-clipboard-list" style="margin-right: 10px"></i>Parents Information</h4>
+            <a class="add-new-record-btn btn btn-primary" href="/add-new-record.php">
+                <i class="fas fa-plus btn-icon"></i>
+                <p>Add new record</p>
+            </a>
+
+        </div>
+        <div class="item-list">
+            <table class="information-table">
+                <?php
+
+                    $parents_list = array(
+                        array(
+                            "ParentId" => "1",
+                            "FathersName" => "Romeo P. Baylon",
+                            "MothersName" => "Emperatris Q. Baylon",
+                            "Address" => "Sandiat West, San Manuel Isabela 3317",
+                            "CPNumber" => "09128486021",
+                            "Occupation" => "Farmers",
+                            "AnnualIncome" => "5000"
+                        ),
+                        array(
+                            "ParentId" => "2",
+                            "FathersName" => "Romeo P. Baylon",
+                            "MothersName" => "Emperatris Q. Baylon",
+                            "Address" => "Sandiat West, San Manuel Isabela 3317",
+                            "CPNumber" => "09128486021",
+                            "Occupation" => "Farmers",
+                            "AnnualIncome" => "5000"
+                        ),
+                        array(
+                            "ParentId" => "3",
+                            "FathersName" => "Romeo P. Baylon",
+                            "MothersName" => "Emperatris Q. Baylon",
+                            "Address" => "Sandiat West, San Manuel Isabela 3317",
+                            "CPNumber" => "09128486021",
+                            "Occupation" => "Farmers",
+                            "AnnualIncome" => "5000"
+                        )
+                    );
+
+                    if( count($parents_list) > 0 ) {
+                        echo <<<EOT
+                        <tr>
+                            <th><i class="fas fa-sort-amount-down-alt"></i></th>
+                            <th>Fathers Name</th>
+                            <th>Mothers Name</th>
+                            <th>Address</th>
+                            <th>CP Number</th>
+                            <th>Occupation</th>
+                            <th>Annual Income</th>
+                            <th>Action</th>
+                        </tr>
+                        EOT;
+
+                        $index = 0;
     
+                        foreach( $parents_list as $parent) {
+                            $index += 1;
+                            $id = $parent["ParentId"];
+                            $fathersName = $parent["FathersName"];
+                            $mothersName = $parent["MothersName"];
+                            $address = $parent["Address"];
+                            $cp = $parent["CPNumber"];
+                            $occupation = $parent["Occupation"];
+                            $annualIncome = $parent["AnnualIncome"];
+    
+                            echo <<<EOT
+                            <tr>
+                                <td>$index</td>
+                                <td>$fathersName</td>
+                                <td>$mothersName</td>
+                                <td>$address</td>
+                                <td>$cp</td>
+                                <td>$occupation</td>
+                                <td>$annualIncome</td>
+                                <td class="action">
+                                    <a href="/update-parent-info.php?parentId=$id" class="toggle edit">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+                                    <a href="/remove-parent-info.php?parentId=$id" class="toggle remove">
+                                        <i class="fas fa-minus-square"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            EOT;
+                        }
+                    }
+                ?>
+            </table>
+            <?php
+                if( count($parents_list) <= 0 ) {
+                    echo <<<EOT
+                    <div class="empty">
+                        <i class="fas fa-exclamation-circle"></i>
+                        NO Record to display!
+                    </div>
+                    EOT;
+                }
+            ?>
+        </div>
+    </div>
   </body>
 </html>

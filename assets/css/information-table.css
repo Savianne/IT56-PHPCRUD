@@ -1,0 +1,38 @@
+.information-table {
+    width: 100%;
+    height: fit-content;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: left;
+
+}
+
+th {
+    font-weight: 600;
+    padding: 15px 8px;
+}
+
+td {
+    font-size: 13px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.action {
+    display: flex;
+}
+
+.action > .edit {
+    margin-right: 10px;
+}
+
+table > div {
+    display: flex;
+    width: 100%;
+    color: red;
+}
