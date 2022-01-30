@@ -80,6 +80,8 @@ function handleSubmit(parentId) {
                  document.querySelector('.loading-indicator-bg').style.display = 'none';
                  document.querySelector('.success-indicator-bg').style.display = 'flex';
              }, 1000);
+
+             window.location.replace("/");
            } else {
               throw "Error";
            }

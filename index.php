@@ -64,12 +64,21 @@
   </div>
   <div class="success-indicator-bg" onClick="closeIndicators()">
     <div class="indicator-container">
-        <i class="fas fa-check" style="margin-right: 10px"></i>Done
+        <i class="fas fa-check" style="margin-right: 10px"></i>Success!
     </div>
   </div>
   <div class="error-indicator-bg" onClick="closeIndicators()">
     <div class="indicator-container">
         <i class="fas fa-times" style="margin-right: 10px"></i>Error!
+    </div>
+  </div>
+  <div class="ask-delete-indicator-bg">
+    <div class="indicator-container">
+      <i class="fas fa-exclamation-circle" style="margin-right: 10px"></i><p>Are you sure you want to delete this record?</p>
+      <div class="btn-action-container">
+        <span class="btn btn-default" onClick="deleteMiddleware.cancelDelete()">Cancel</span>
+        <span class="btn btn-remove" style="margin-left: 10px" onClick="deleteMiddleware.continueDelete()">Yes</span>
+      </div>
     </div>
   </div>
   <script>
@@ -79,5 +88,6 @@
       }
   </script>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="/assets/javascript/middleware/delete-record.js"></script>
   <script src="/assets/javascript/middleware/retrieve-record.js"></script>
 </html>

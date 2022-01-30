@@ -123,7 +123,7 @@
   </div>
   <div class="success-indicator-bg" onClick="closeIndicators()">
     <div class="indicator-container">
-        <i class="fas fa-check" style="margin-right: 10px"></i>Done
+        <i class="fas fa-check" style="margin-right: 10px"></i>Success!
     </div>
   </div>
   <div class="error-indicator-bg" onClick="closeIndicators()">

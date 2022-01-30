@@ -18,7 +18,8 @@ axios.post('retrieve-record.php')
     }
 })
 .catch((error) => {
-    console.log(error)
+    document.querySelector('.loading-indicator-bg').style.display = 'none';
+    document.querySelector('.error-indicator-bg').style.display = 'flex';
 })
 
 function createTableRow(index, data) {
@@ -46,6 +47,10 @@ function createTableRow(index, data) {
     editBtn.innerHTML = `<i class="fas fa-edit"></i>`;
     deleteBtn.innerHTML = `<i class="fas fa-minus-square"></i>`;
 
+    deleteBtn.onclick = function() {
+        deleteMiddleware.delete(data.parentId);
+    }
+    
     actionFeild.appendChild(editBtn);
     actionFeild.appendChild(deleteBtn)
 

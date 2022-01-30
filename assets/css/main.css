@@ -75,13 +75,20 @@ body {
 /* Button */
 .btn {
     display: flex;
+    height: fit-content;
     padding: 5px 10px;
     border-radius: 4px;
     transition: opacity 300ms ease-in-out;
+    cursor: pointer;
 }
 
 .btn-icon {
     margin-right: 5px;
+}
+
+.btn-default {
+    color: rgb(36, 36, 36);
+    background-color: rgba(189, 188, 188, 0.212);
 }
 
 .btn-primary {
@@ -91,6 +98,11 @@ body {
 
 .btn-secondary {
     background-color: #0bed62;
+    color: white;
+}
+
+.btn-remove {
+    background-color: rgb(230, 2, 2);
     color: white;
 }
 
@@ -251,7 +263,8 @@ form {
 
 .loading-indicator-bg,
 .success-indicator-bg,
-.error-indicator-bg {
+.error-indicator-bg,
+.ask-delete-indicator-bg {
     display: none;
     width: 100%;
     height: 100vh;
@@ -264,9 +277,14 @@ form {
     z-index: 100;
 }
 
+/* .ask-delete-indicator-bg {
+    display: flex;
+} */
+
 .loading-indicator-bg > .indicator-container,
 .success-indicator-bg > .indicator-container,
-.error-indicator-bg > .indicator-container {
+.error-indicator-bg > .indicator-container,
+.ask-delete-indicator-bg > .indicator-container {
     display: flex;
     width: fit-content;
     height: fit-content;
@@ -279,6 +297,23 @@ form {
     box-shadow: 0 1px 10px rgba(128, 128, 128, 0.616);
 } 
 
+.ask-delete-indicator-bg > .indicator-container {
+    padding: 20px 10px 5px 10px;
+    width: 350px;
+    font-size: 15px;
+    flex-wrap: wrap;
+    color: orange;
+}
+
+.ask-delete-indicator-bg > .indicator-container > .btn-action-container {
+    display: flex;
+    flex: 0 1 100%;
+    justify-content: flex-end;
+    height: 50px;
+    margin-top: 15px;
+    border-top: 1px solid #ede9e9c2;
+    align-items: center;
+}
 /* .error-indicator-bg {
     display: flex;
 } */

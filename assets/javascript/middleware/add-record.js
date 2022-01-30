@@ -88,8 +88,6 @@
             document.querySelector('.loading-indicator-bg').style.display = 'none';
             document.querySelector('.error-indicator-bg').style.display = 'flex';
          })
-     } else {
-         alert("error field")
      }
 
  }
