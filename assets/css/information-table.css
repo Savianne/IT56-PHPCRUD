@@ -31,8 +31,3 @@ tr:nth-child(even) {
     margin-right: 10px;
 }
 
-table > div {
-    display: flex;
-    width: 100%;
-    color: red;
-}

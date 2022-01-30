@@ -7,7 +7,8 @@ body {
     font-family: Sen-Regular;
 }
 
-.parents-info-list > .container-head > h4 {
+.parents-info-list > .container-head > h4,
+.add-record > .container-head > h4 {
     font-size: 18px;
     font-weight: bold;
     color: rgba(48, 47, 47, 0.76);

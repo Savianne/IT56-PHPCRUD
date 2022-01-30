@@ -21,7 +21,12 @@ body {
     flex: 0 1 1100px;
 }
 
-.parents-info-list > .container-head {
+.add-record {
+    flex: 0 1 550px;
+}
+
+.parents-info-list > .container-head,
+.add-record > .container-head {
     display: flex;
     flex: 0 1 100%;
     padding: 15px;
@@ -29,14 +34,19 @@ body {
     border-bottom: 1px solid #ede9e9c2;
 }
 
-.parents-info-list > .container-head > h4 {
+.parents-info-list > .container-head > h4,
+.add-record > .container-head > h4 {
     margin-right: auto;
 }
 
 .parents-info-list > .container-head > .add-new-record-btn,
 .parents-info-list > .container-head > .add-new-record-btn:hover,
 .parents-info-list > .container-head > .add-new-record-btn:active,
-.parents-info-list > .container-head > .add-new-record-btn:visited {
+.parents-info-list > .container-head > .add-new-record-btn:visited,
+.add-record > .container-head > .add-new-record-btn,
+.add-record > .container-head > .add-new-record-btn:hover,
+.add-record > .container-head > .add-new-record-btn:active,
+.add-record > .container-head > .add-new-record-btn:visited {
     font-size: 15px;
     text-decoration: none;
 }
@@ -79,6 +89,11 @@ body {
     color: whitesmoke;
 }
 
+.btn-secondary {
+    background-color: #0bed62;
+    color: white;
+}
+
 .btn:hover {
     opacity: 0.70;
 }
@@ -115,4 +130,159 @@ body {
 
 .toggle:active {
     opacity: 0.50;
+}
+
+/* Form */
+
+input,
+input:hover,
+input:active,
+input:focus {
+    outline: 0;
+    border: 0;
+}
+
+form {
+    display: flex;
+    flex: 0 1 100%;
+    flex-wrap: wrap;
+    padding: 15px 20px;
+    justify-content: center;
+}
+
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex: 0 1 100%;
+    padding: 10px 0;
+}
+
+.input-group > .input-field {
+    display: flex;
+    flex: 1;
+    margin-left: auto;
+    height: 25px;
+    border: 1px solid #ede9e9c2;
+    outline: 1px solid rgba(168, 167, 167, 0.247);
+    border-radius: 5px;
+    padding: 5px;
+    color: rgba(48, 47, 47, 0.76);
+    font-size: 16px;
+    transition: outline 300ms ease-in-out;
+}
+
+.input-group > .edit-input-icn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    margin-left: 20px;
+    color: gray;
+}
+
+.input-group > .input-field:focus {
+    outline: 1px solid rgb(0, 225, 255);
+}
+
+.input-group > .input-field::placeholder {
+    font-weight: normal;
+    font-size: 12.5px;
+    color: rgba(128, 128, 128, 0.418);
+}
+
+.input-group > .error-feild,
+.input-group > .error-feild:focus {
+    outline: 1px solid red;
+}
+
+.input-group > strong {
+    display: flex;
+    flex: 0 1 130px;
+    font-weight: 600;
+    color: rgba(48, 47, 47, 0.76);
+    justify-content: right;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.input-group > .error-input {
+    display: flex;
+    flex: 0 1 100%;
+    padding-left: 150px;
+    margin-top: 5px;
+    color: red;
+    font-size: 12px;
+}
+
+.input-submit {
+    display: flex;
+    flex: 1;
+    padding: 8px 0;
+    font-size: 18px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    box-shadow: 0;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity 300ms ease-in-out;
+}
+
+.input-submit:hover {
+    opacity: 0.70;
+}
+
+.input-submit:active {
+    opacity: 0.50;
+}
+
+#nodata {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 40px 0;
+    color: red;
+    font-weight: 600;
+    background-color: #f8f8f8;
+}
+
+.loading-indicator-bg,
+.success-indicator-bg,
+.error-indicator-bg {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    background-color: rgba(231, 229, 229, 0.322);
+    backdrop-filter: 10px;
+    z-index: 100;
+}
+
+.loading-indicator-bg > .indicator-container,
+.success-indicator-bg > .indicator-container,
+.error-indicator-bg > .indicator-container {
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    padding: 20px 50px;
+    margin-top: 200px;
+    background-color: white;
+    color: rgb(0, 174, 255);
+    font-size: 20px;
+    border-radius: 3px;
+    box-shadow: 0 1px 10px rgba(128, 128, 128, 0.616);
+} 
+
+/* .error-indicator-bg {
+    display: flex;
+} */
+
+.error-indicator-bg > .indicator-container {
+    color: red;
 }
