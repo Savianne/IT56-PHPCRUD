@@ -38,6 +38,8 @@
         </div>
         <?php
 
+        require_once 'config.php';
+        
         $parent_id = $_GET['parentId'];
 
         // Create connection
