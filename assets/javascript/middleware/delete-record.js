@@ -20,7 +20,7 @@ class DeleteRecordMiddleWare {
     continueDelete() {
         document.querySelector('.ask-delete-indicator-bg').style.display = 'none';
         document.querySelector('.loading-indicator-bg').style.display = 'flex';
-        axios.post('delete-record.php', {"parentId": this.toDelete})
+        axios.post('api/delete-record.php', {"parentId": this.toDelete})
         .then((response) => {
             if(response.data.success) {
                 setTimeout(() => {

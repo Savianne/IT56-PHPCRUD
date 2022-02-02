@@ -1,7 +1,7 @@
 
 document.querySelector('.loading-indicator-bg').style.display = 'flex';
     
-axios.post('retrieve-record.php')
+axios.post('/api/retrieve-record.php')
 .then((response) => {
     if(response.data.success) {
         (response.data.payload.length)? document.getElementById('nodata').style.display = "none" : document.getElementById('nodata').style.display = "flex";  

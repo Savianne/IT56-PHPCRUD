@@ -1,7 +1,7 @@
 <?php
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        require_once 'config.php';
+        require_once $_SERVER['DOCUMENT_ROOT'].'/config.php';
        
         header('Content-Type: application/json');  // <-- header declaration
 

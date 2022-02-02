@@ -57,7 +57,7 @@
      ) {
          document.querySelector('.loading-indicator-bg').style.display = 'flex';
 
-         axios.post('add-record.php', {
+         axios.post('api/add-record.php', {
             "fathersName": fathersName.value,
             "mothersName": mothersName.value,
             "address": address.value,

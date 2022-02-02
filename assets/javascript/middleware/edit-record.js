@@ -57,7 +57,7 @@ function handleSubmit(parentId) {
     ) {
         document.querySelector('.loading-indicator-bg').style.display = 'flex';
 
-        axios.post('edit-record.php', {
+        axios.post('api/edit-record.php', {
            "fathersName": fathersName.value,
            "mothersName": mothersName.value,
            "address": address.value,
