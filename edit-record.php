@@ -30,7 +30,7 @@
     </div> -->
     <div class="container add-record">
         <div class="container-head">
-            <h4><i class="fas fa-plus" style="margin-right: 10px"></i>Add Record</h4>
+            <h4><i class="fas fa-edit" style="margin-right: 10px"></i>Update Record</h4>
             <a class="add-new-record-btn btn btn-secondary" href="index.php">
                 <i class="fas fa-clipboard-list btn-icon"></i>
                 <p>View Records</p>
