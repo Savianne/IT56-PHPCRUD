@@ -51,8 +51,8 @@
                 </tr>
             </table>
             <div id="nodata">
-            <i class="fas fa-exclamation-circle" style="margin-right: 10px"></i>
-            No Data to display!
+              <i class="fas fa-exclamation-circle" style="margin-right: 10px"></i>
+              No Data to display!
             </div>
         </div>
     </div>

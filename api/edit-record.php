@@ -45,8 +45,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     exit();
 }
 
-if(!isset($_GET['parentId'])) {
-    header("Location: add-record.php", true, 301);
-    exit();
-}
 ?>

@@ -1,3 +1,9 @@
+<?php
+if(!isset($_GET['parentId'])) {
+    header("Location: add-record.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
