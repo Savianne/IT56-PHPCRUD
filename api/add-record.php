@@ -13,9 +13,9 @@
 
         // Check connection
         if ($conn->connect_error) {
-            $result = array('success' => false, 'error' => $conn->connect_error);
+            $flag = array('success' => false, 'error' => $conn->connect_error);
             //return the json response :
-            echo json_encode($result, true);    // <--- encode
+            echo json_encode($flag, true);    // <--- encode
             exit();
         }
 
@@ -36,9 +36,9 @@
         $stmt->close();
         $conn->close();
 
-        $result = array('success' => true);
+        $flag = array('success' => true);
         //return the json response :
-        echo json_encode($result, true);    // <--- encode
+        echo json_encode($flag, true);    // <--- encode
 
         exit();
    }
